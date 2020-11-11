@@ -26,9 +26,11 @@ def main() -> (dict, dict, dict, dict, ):
         new_row['_list'] = type
         new_row['_counter'] = counter
         return  new_row
+
+    # List compression
     functional_commands = [addingGeneral(row,'parse',i) for i,row in  enumerate(parse_commands, 1)]
     functional_commands.extend([addingGeneral(row,'copy',i) for i,row in  enumerate(copy_commands, 1)])
-    print(f"functional_commands: {functional_commands}")
+    # print(f"functional_commands: {functional_commands}")
 
 
     return parse_commands, copy_commands, functional_commands, random_commands
